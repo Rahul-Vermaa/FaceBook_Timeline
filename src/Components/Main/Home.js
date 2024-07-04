@@ -19,7 +19,7 @@ const Home = () => {
     
     const fetchData = async (date = '') => {
         try {
-            const limit = 20;
+            const limit = 30;
             const res = await superagent.get(`http://139.59.47.49:4004/api/posts?limit=${limit}&start=1&orderby=0&date=${date}`);
             setData(res.body);
             setFilteredData(res.body);
